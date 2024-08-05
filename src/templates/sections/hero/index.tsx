@@ -2,12 +2,14 @@
 
 import { IconDotGrid } from "@/assets/svg/dotGrid";
 import { Button } from "@/components/button";
+import { FloatAlertCard } from "@/components/floatAlertCard";
 import { Typography } from "@/components/typography";
 import { UsersImageAndText } from "@/components/usersImageAndText";
 import { Theme } from "@/themes";
 import Image from "next/image";
 import { ReactElement } from "react";
 import { MdArrowRightAlt } from "react-icons/md";
+import { TbActivityHeartbeat } from "react-icons/tb";
 
 import {
     ButtonsContainer,
@@ -102,13 +104,23 @@ export default function HeroSection(): ReactElement {
                 </HeroImageContainer>
 
                 <FloatRectangle bottom={0} left={0} color="blue50" />
+
                 <FloatRectangle
                     bottom="100px"
                     left={0}
                     borderRadius="50px 0 100px 0px"
                     color="blue70"
                 />
+
                 <FloatRectangle top="100px" left="50px" color="blue40" />
+
+                <div style={{ position: "absolute", bottom: 200, right: 30 }}>
+                    <FloatAlertCard
+                        icon={<TbActivityHeartbeat size={15} color={Theme.colors.white} />}
+                        title="Frequência cardíaca elevada (110 BPM)"
+                        description="16/07/2024 - 19:24"
+                    />
+                </div>
             </HeroImageContent>
         </Hero>
     );
