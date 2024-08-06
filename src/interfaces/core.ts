@@ -16,3 +16,19 @@ export interface ISVGsDynamicSize {
 }
 
 export interface ISVGsDynamicColorAndSize extends ISVGsDynamicColor, ISVGsDynamicSize {}
+
+export interface IGridColumnsContent {
+    children: ReactNode;
+    columns: number;
+    columnsTablet: number;
+    columnsMobile: number;
+}
+
+export interface IGridContainerProps {
+    margin: string;
+    height: string;
+    overflow: number;
+    backgroundSource: string;
+    backgroundContent: string;
+    backgroundBaseColor: string;
+}

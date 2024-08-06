@@ -2,12 +2,12 @@ import styled, { css } from "styled-components";
 
 import { IVariantProps } from "./constants";
 
-export const StyledButton = styled.button<{ variant: IVariantProps }>`
+export const StyledButton = styled.button<{ variant: IVariantProps; padding: string }>`
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding: 10px 20px;
+    padding: ${({ padding }) => padding};
     cursor: pointer;
     border-radius: 4px;
 

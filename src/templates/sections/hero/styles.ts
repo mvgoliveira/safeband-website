@@ -5,7 +5,6 @@ export const Hero = styled.section`
     display: flex;
     width: 100%;
     height: 100vh;
-    padding: 0 80px;
 `;
 
 export const Content = styled.article`
@@ -14,6 +13,7 @@ export const Content = styled.article`
     gap: 30px;
     width: 100%;
     justify-content: center;
+    max-width: 500px;
 `;
 
 export const HeroImageContent = styled.article`

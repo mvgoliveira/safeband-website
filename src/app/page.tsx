@@ -1,6 +1,7 @@
 "use client";
 
 import HeroSection from "@/templates/sections/hero";
+import ImageAndContent from "@/templates/sections/imageAndContent";
 import InformationSection from "@/templates/sections/information";
 import { Theme } from "@/themes";
 import { ReactElement } from "react";
@@ -32,6 +33,44 @@ export default function Home(): ReactElement {
                     },
                 ]}
             />
+
+            <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+                <ImageAndContent
+                    desktopPadding="40px 0 0 0"
+                    $mobileButtonSize="full"
+                    leftContent={{
+                        contentWidthDesktop: "440px",
+                        imageUri: "/plataforma_unificada_safeband.webp",
+                        imageAlt: "imagem da plataforma SafeBand",
+                        imageHeight: 330,
+                        imageWidth: 500,
+                    }}
+                    rightContent={{
+                        title: "A plataforma inteligente de monitoramento de saúde e segurança",
+                        description:
+                            "Facilite o monitoramento: Dashboard completa para tornar o monitoramento de quem você ama, mais simples. produza relatórios e acompanhe as medições em tempo real.",
+                        buttonText: "Saiba mais",
+                    }}
+                />
+
+                <ImageAndContent
+                    desktopPadding="0"
+                    $mobileButtonSize="full"
+                    leftContent={{
+                        title: "Alerte a todos sobre possível risco a sua saúde e/ou segurança.",
+                        description:
+                            "Segurança sempre: com um único botão, de fácil acesso, alerte sobre sua saúde para todos seus contatos de emergência, serviços de saúde e de segurança da sua região. Sua vida em primeiro lugar.",
+                        buttonText: "Saiba mais",
+                    }}
+                    rightContent={{
+                        contentWidthDesktop: "440px",
+                        imageUri: "/pessoas_usando_safeband.webp",
+                        imageAlt: "imagem de pessoas com uma SafeBand no pulso",
+                        imageHeight: 360,
+                        imageWidth: 463,
+                    }}
+                />
+            </div>
         </Container>
     );
 }

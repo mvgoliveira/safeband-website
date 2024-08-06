@@ -5,4 +5,5 @@ export const Container = styled.main`
     flex-direction: column;
     width: 100%;
     overflow-y: auto;
+    padding: 0 80px;
 `;

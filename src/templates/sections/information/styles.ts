@@ -5,6 +5,7 @@ export const Container = styled.section`
     width: 100%;
     align-items: flex-end;
     position: relative;
+    margin-left: -80px;
 `;
 
 export const Content = styled.article`

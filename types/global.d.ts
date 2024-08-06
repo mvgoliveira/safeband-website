@@ -6,4 +6,19 @@ declare global {
         height?: number;
         color?: keyof typeof Theme.colors;
     };
+
+    export type GridProps = {
+        children?: ReactNode;
+        height?: string;
+        overflow?: boolean;
+        padding?: string;
+        margin?: string;
+        backgroundSource?: string;
+        backgroundContent?: string;
+        backgroundBaseColor?: string;
+        shadow?: boolean;
+        darkest?: boolean;
+        shadowHeight?: string;
+        maxWidth?: string;
+    };
 }
