@@ -6,6 +6,7 @@ export const Container = styled.section`
     align-items: flex-end;
     position: relative;
     margin-left: -80px;
+    margin-top: -80px;
 `;
 
 export const Content = styled.article`

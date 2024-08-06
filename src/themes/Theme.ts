@@ -23,8 +23,9 @@ export const Theme = {
         blue50: "#09A6FF",
         blue60: "#2CA0E2",
         blue70: "#0C89CF",
-        blue80: "#075A89",
-        blue90: "#234AAA",
+        blue80: "#206A95",
+        blue90: "#075A89",
+        blue100: "#234AAA",
 
         yellow10: "#FEF3CE",
         yellow20: "#FCC10A",

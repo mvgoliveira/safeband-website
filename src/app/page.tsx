@@ -1,9 +1,10 @@
 "use client";
 
-import { DataList } from "@/templates/sections/dataList";
+import { DataSection } from "@/templates/sections/data";
 import HeroSection from "@/templates/sections/hero";
 import ImageAndContent from "@/templates/sections/imageAndContent";
 import InformationSection from "@/templates/sections/information";
+import { PricingSection } from "@/templates/sections/pricing";
 import { Theme } from "@/themes";
 import { ReactElement } from "react";
 import { MdCall, MdSchedule, MdWatch } from "react-icons/md";
@@ -73,13 +74,15 @@ export default function Home(): ReactElement {
                 />
             </div>
 
-            <DataList
+            <DataSection
                 data={[
                     { title: "+3.000", description: "Monitorados ativos" },
                     { title: "+8.500", description: "Alertas emitidos" },
                     { title: "95%", description: "Satisfação de clientes" },
                 ]}
             />
+
+            <PricingSection />
         </Container>
     );
 }

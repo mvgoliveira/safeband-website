@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
-    width: 100%;
-    padding: 0 50px;
-`;
-
-export const Content = styled.article`
+export const Container = styled.article`
     display: flex;
     width: 100%;
     background: ${({ theme }) => theme.colors.blue70};
