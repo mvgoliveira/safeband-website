@@ -6,4 +6,5 @@ export const Container = styled.main`
     width: 100%;
     overflow-y: auto;
     padding: 0 80px;
+    gap: 80px;
 `;

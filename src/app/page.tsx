@@ -1,5 +1,6 @@
 "use client";
 
+import { DataList } from "@/templates/sections/dataList";
 import HeroSection from "@/templates/sections/hero";
 import ImageAndContent from "@/templates/sections/imageAndContent";
 import InformationSection from "@/templates/sections/information";
@@ -36,7 +37,7 @@ export default function Home(): ReactElement {
 
             <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
                 <ImageAndContent
-                    desktopPadding="40px 0 0 0"
+                    desktopPadding="0 0 0 0"
                     $mobileButtonSize="full"
                     leftContent={{
                         contentWidthDesktop: "440px",
@@ -71,6 +72,14 @@ export default function Home(): ReactElement {
                     }}
                 />
             </div>
+
+            <DataList
+                data={[
+                    { title: "+3.000", description: "Monitorados ativos" },
+                    { title: "+8.500", description: "Alertas emitidos" },
+                    { title: "95%", description: "Satisfação de clientes" },
+                ]}
+            />
         </Container>
     );
 }
