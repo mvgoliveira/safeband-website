@@ -1,6 +1,7 @@
 "use client";
 
 import { DataSection } from "@/templates/sections/data";
+import { Footer } from "@/templates/sections/footer";
 import HeroSection from "@/templates/sections/hero";
 import ImageAndContent from "@/templates/sections/imageAndContent";
 import InformationSection from "@/templates/sections/information";
@@ -83,6 +84,8 @@ export default function Home(): ReactElement {
             />
 
             <PricingSection />
+
+            <Footer />
         </Container>
     );
 }

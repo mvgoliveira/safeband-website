@@ -63,7 +63,7 @@ export default function HeroSection(): ReactElement {
 
                 <ButtonsContainer>
                     <Button variant="primary">
-                        Saiba Mais <MdArrowRightAlt size={15} color={Theme.colors.white} />
+                        Saiba Mais <MdArrowRightAlt size={18} color={Theme.colors.white} />
                     </Button>
 
                     <UsersImageAndText
