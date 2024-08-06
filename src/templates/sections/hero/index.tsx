@@ -24,14 +24,14 @@ export default function HeroSection(): ReactElement {
     return (
         <Hero>
             <Content>
-                <div style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 446 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 546 }}>
                     <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                         <Typography
                             tag="span"
                             color="blue40"
                             fontFamily="roboto"
-                            fontSize={{ xs: "fs100" }}
-                            fontWeight="medium"
+                            fontSize={{ xs: "fs200" }}
+                            fontWeight="regular"
                         >
                             SafeBand
                         </Typography>
@@ -40,19 +40,19 @@ export default function HeroSection(): ReactElement {
                             tag="h1"
                             color="black"
                             fontFamily="inter"
-                            fontSize={{ xs: "fs400" }}
-                            fontWeight="semibold"
+                            fontSize={{ xs: "fs500" }}
+                            fontWeight="medium"
                         >
                             A pulseira mais tecnológica para a saúde e segurança.
                         </Typography>
                     </div>
 
-                    <div style={{ maxWidth: 323 }}>
+                    <div style={{ maxWidth: 350 }}>
                         <Typography
                             tag="p"
-                            color="gray80"
+                            color="gray70"
                             fontFamily="roboto"
-                            fontSize={{ xs: "fs75" }}
+                            fontSize={{ xs: "fs100" }}
                             fontWeight="regular"
                         >
                             Monitore agora mesmo a saúde e segurança da sua família, amigos ou
@@ -103,10 +103,10 @@ export default function HeroSection(): ReactElement {
                     />
                 </HeroImageContainer>
 
-                <FloatRectangle bottom={0} left={0} color="blue50" />
+                <FloatRectangle bottom="40px" left={0} color="blue50" />
 
                 <FloatRectangle
-                    bottom="100px"
+                    bottom="140px"
                     left={0}
                     borderRadius="50px 0 100px 0px"
                     color="blue70"

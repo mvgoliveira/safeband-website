@@ -20,4 +20,8 @@ export const ImageContainer = styled.div`
     width: 38px;
     margin-left: -10px;
     border: 3px solid ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.red10};
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
