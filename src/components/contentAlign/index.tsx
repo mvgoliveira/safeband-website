@@ -1,4 +1,4 @@
-import { IContentAlign } from "@interfaces/components";
+import { IContentAlign } from "@/interfaces/core";
 import { ReactElement } from "react";
 
 import { Container } from "./styles";

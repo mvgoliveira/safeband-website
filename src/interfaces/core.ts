@@ -32,3 +32,13 @@ export interface IGridContainerProps {
     backgroundContent: string;
     backgroundBaseColor: string;
 }
+
+export interface IContentAlign {
+    children: ReactNode;
+    gap?: string;
+    margin?: string;
+    padding?: string;
+    contentDirection: string;
+    contentAlignMainAxis: string;
+    contentAlignSecondaryAxis: string;
+}
