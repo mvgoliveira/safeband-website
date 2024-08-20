@@ -49,7 +49,7 @@ export default function ImageAndContent({
 
     return (
         <TwoColumns
-            padding={windowsSize.width > 1000 ? desktopPadding : mobilePadding}
+            padding={windowsSize.width > 900 ? desktopPadding : mobilePadding}
             backgroundSource={backgroundSource}
             backgroundContent={themeConfig[theme].backgroundColor}
         >
@@ -65,7 +65,15 @@ export default function ImageAndContent({
                         contentAlignSecondaryAxis={leftContent?.imageUri ? "center" : "start"}
                     >
                         {leftContent?.title && (
-                            <div style={{ margin: "0 0 20px 0", width: 510 }}>
+                            <div
+                                style={{
+                                    margin: "0 0 20px 0",
+                                    width:
+                                        windowsSize.width > 900
+                                            ? leftContent.contentWidthDesktop
+                                            : leftContent.contentWidthMobile,
+                                }}
+                            >
                                 <Typography
                                     tag="h2"
                                     color={themeConfig[theme].headingColor}
@@ -79,7 +87,15 @@ export default function ImageAndContent({
                         )}
 
                         {leftContent?.description && (
-                            <div style={{ margin: "0 0 20px 0", width: 500 }}>
+                            <div
+                                style={{
+                                    margin: "0 0 20px 0",
+                                    width:
+                                        windowsSize.width > 900
+                                            ? leftContent.contentWidthDesktop
+                                            : leftContent.contentWidthMobile,
+                                }}
+                            >
                                 <Typography
                                     tag="p"
                                     color={themeConfig[theme].paragraphColor}
@@ -114,14 +130,14 @@ export default function ImageAndContent({
                                     alt={leftContent.imageAlt || undefined}
                                     width={
                                         windowsSize.width < 580
-                                            ? windowsSize.width - 40
+                                            ? windowsSize.width - 50
                                             : (leftContent.imageWidth as number)
                                     }
                                     height={
                                         windowsSize.width < 580
                                             ? (leftContent.imageHeight / leftContent.imageWidth) *
                                                   windowsSize.width -
-                                              20
+                                              45
                                             : (leftContent.imageHeight as number)
                                     }
                                 />
@@ -136,7 +152,15 @@ export default function ImageAndContent({
                         contentAlignSecondaryAxis={rightContent?.imageUri ? "center" : "start"}
                     >
                         {rightContent?.title && (
-                            <div style={{ margin: "0 0 20px 0", width: 530 }}>
+                            <div
+                                style={{
+                                    margin: "0 0 20px 0",
+                                    width:
+                                        windowsSize.width > 900
+                                            ? rightContent.contentWidthDesktop
+                                            : rightContent.contentWidthMobile,
+                                }}
+                            >
                                 <Typography
                                     tag="h2"
                                     color={themeConfig[theme].headingColor}
@@ -150,7 +174,15 @@ export default function ImageAndContent({
                         )}
 
                         {rightContent?.description && (
-                            <div style={{ margin: "0 0 20px 0", width: 500 }}>
+                            <div
+                                style={{
+                                    margin: "0 0 20px 0",
+                                    width:
+                                        windowsSize.width > 900
+                                            ? rightContent.contentWidthDesktop
+                                            : rightContent.contentWidthMobile,
+                                }}
+                            >
                                 <Typography
                                     tag="p"
                                     color={themeConfig[theme].paragraphColor}
@@ -186,14 +218,14 @@ export default function ImageAndContent({
                                     alt={rightContent.imageAlt || undefined}
                                     width={
                                         windowsSize.width < 500
-                                            ? windowsSize.width - 20
+                                            ? windowsSize.width - 50
                                             : (rightContent.imageWidth as number)
                                     }
                                     height={
                                         windowsSize.width < 500
                                             ? (rightContent.imageHeight / rightContent.imageWidth) *
                                                   windowsSize.width -
-                                              20
+                                              45
                                             : (rightContent.imageHeight as number)
                                     }
                                 />

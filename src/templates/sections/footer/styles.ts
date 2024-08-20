@@ -5,6 +5,11 @@ export const Container = styled.div`
     width: 100vw;
     background: ${({ theme }) => theme.colors.blue70};
     padding: 20px 40px;
-    margin-left: -80px;
     justify-content: space-between;
+    margin-top: 80px;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 20px;
+    }
 `;

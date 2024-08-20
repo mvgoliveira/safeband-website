@@ -25,6 +25,11 @@ export const IconContainer = styled.div`
 export const BottomContainer = styled.article`
     display: flex;
     align-items: center;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 10px;
+    }
 `;
 
 export const CardContainer = styled.div`
@@ -32,6 +37,10 @@ export const CardContainer = styled.div`
     flex-direction: column;
     border-radius: 4px;
     overflow: hidden;
+
+    @media (max-width: 900px) {
+        order: 1;
+    }
 `;
 
 export const PrimaryCard = styled.div`
@@ -54,6 +63,10 @@ export const SecondaryCard = styled.div`
     border-radius: 4px 0px 0px 4px;
     padding: 20px;
     justify-content: space-between;
+
+    @media (max-width: 900px) {
+        order: 2;
+    }
 `;
 
 export const LabelCard = styled.div`

@@ -5,6 +5,7 @@ import { Button } from "@/components/button";
 import { FloatAlertCard } from "@/components/floatAlertCard";
 import { Typography } from "@/components/typography";
 import { UsersImageAndText } from "@/components/usersImageAndText";
+import { useWindowSize } from "@/hooks/useWindowSize";
 import { Theme } from "@/themes";
 import Image from "next/image";
 import { ReactElement } from "react";
@@ -18,9 +19,13 @@ import {
     HeroImageContent,
     HeroImageContainer,
     FloatRectangle,
+    DotGridContainer,
+    FloatAlertContainer,
 } from "./styles";
 
 export default function HeroSection(): ReactElement {
+    const window = useWindowSize();
+
     return (
         <Hero>
             <Content>
@@ -90,9 +95,9 @@ export default function HeroSection(): ReactElement {
             </Content>
 
             <HeroImageContent>
-                <div style={{ position: "absolute", top: 50, left: 10 }}>
+                <DotGridContainer>
                     <IconDotGrid color="gray30" />
-                </div>
+                </DotGridContainer>
 
                 <HeroImageContainer>
                     <Image
@@ -103,24 +108,32 @@ export default function HeroSection(): ReactElement {
                     />
                 </HeroImageContainer>
 
-                <FloatRectangle bottom="40px" left={0} color="blue50" />
+                <FloatRectangle
+                    bottom={window.width > 900 ? 40 : -25}
+                    left={window.width > 900 ? 0 : window.width - 105}
+                    color="blue50"
+                />
 
                 <FloatRectangle
-                    bottom="140px"
-                    left={0}
+                    bottom={window.width > 900 ? 140 : -25}
+                    left={window.width > 900 ? 0 : window.width - 155}
                     borderRadius="50px 0 100px 0px"
                     color="blue70"
                 />
 
-                <FloatRectangle top="100px" left="50px" color="blue40" />
+                <FloatRectangle
+                    left={window.width > 900 ? 50 : -10}
+                    top={window.width > 900 ? 100 : -10}
+                    color="blue40"
+                />
 
-                <div style={{ position: "absolute", bottom: 200, right: 30 }}>
+                <FloatAlertContainer>
                     <FloatAlertCard
                         icon={<TbActivityHeartbeat size={15} color={Theme.colors.white} />}
                         title="Frequência cardíaca elevada (110 BPM)"
                         description="16/07/2024 - 19:24"
                     />
-                </div>
+                </FloatAlertContainer>
             </HeroImageContent>
         </Hero>
     );

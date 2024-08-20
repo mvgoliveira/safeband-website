@@ -7,4 +7,9 @@ export const Container = styled.main`
     overflow-y: auto;
     padding: 0 80px;
     gap: 80px;
+
+    @media (max-width: 900px) {
+        padding: 0 20px;
+        gap: 40px;
+    }
 `;

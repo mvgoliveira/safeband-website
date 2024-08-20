@@ -29,8 +29,8 @@ export default function InformationSection({ data }: IInformationSectionProps): 
                                     tag="span"
                                     color="black"
                                     fontFamily="roboto"
-                                    fontSize={{ xs: "fs100" }}
-                                    fontWeight="bold"
+                                    fontSize={{ xs: "fs75" }}
+                                    fontWeight="semibold"
                                 >
                                     {item.title}
                                 </Typography>
@@ -53,7 +53,7 @@ export default function InformationSection({ data }: IInformationSectionProps): 
             </Content>
 
             <ScrollDownButton type="button">
-                <MdKeyboardArrowDown size={30} color={Theme.colors.white} />
+                <MdKeyboardArrowDown size={25} color={Theme.colors.white} />
             </ScrollDownButton>
         </Container>
     );

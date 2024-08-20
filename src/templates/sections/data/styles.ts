@@ -5,6 +5,11 @@ export const Container = styled.article`
     width: 100%;
     background: ${({ theme }) => theme.colors.blue70};
     padding: 40px;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 40px;
+    }
 `;
 
 export const Item = styled.div`
