@@ -7,6 +7,7 @@ export const Hero = styled.section`
     min-height: 100vh;
 
     @media (max-width: 900px) {
+        min-height: fit-content;
         flex-direction: column-reverse;
         justify-content: flex-end;
         padding-top: 20px;
